@@ -1,0 +1,161 @@
+:root {
+  --green: #7cb342;
+  --green-light: #e6f7f3;
+  --red: #e53935;
+  --red-light: #fdecea;
+  --grey: #f5f6f8;
+  --border: #e0e0e0;
+  --text: #1a1a1a;
+  --muted: #888;
+  --white: #ffffff;
+}
+
+body {
+  width: 300px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--white);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+
+.header img {
+  width: 28px;
+  height: 28px;
+}
+
+.header h1 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.header span {
+  font-size: 11px;
+  color: var(--muted);
+  display: block;
+  margin-top: 1px;
+}
+
+.status-card {
+  margin: 14px;
+  padding: 18px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  background: var(--grey);
+}
+
+.status-card.shopify {
+  background: var(--green-light);
+  border-color: #a8dfd0;
+}
+
+.status-card.not-shopify {
+  background: var(--red-light);
+  border-color: #f5b8b5;
+}
+
+.status-emoji {
+  width: 50px;
+  height: auto;
+}
+
+.status-text h2 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.status-card.shopify   .status-text h2 { color: var(--green); }
+.status-card.not-shopify .status-text h2 { color: var(--red); }
+.status-card.loading   .status-text h2 { color: var(--muted); }
+
+.status-text p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.signals {
+  margin: 0 14px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.signals-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  padding: 8px 12px;
+  background: var(--grey);
+  border-bottom: 1px solid var(--border);
+}
+
+.signal-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+
+.signal-row:last-child {
+  border-bottom: none;
+}
+
+.signal-name {
+  font-size: 12px;
+  color: var(--text);
+  font-family: monospace;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.dot.hit {
+  background: var(--green);
+}
+
+.footer {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--grey);
+}
+
+.footer-brand {
+  font-size: 10px;
+  color: #bbb;
+}
+
+.footer-url {
+  font-size: 10px;
+  color: var(--muted);
+  font-family: monospace;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

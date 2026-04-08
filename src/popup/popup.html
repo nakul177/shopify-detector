@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify Detector</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="../../icons/logo.png" alt="logo" />
+      <div>
+        <h1>Shopify Detector</h1>
+      </div>
+    </div>
+
+    <div id="status-card" class="status-card loading">
+      <div class="status-text">
+        <h2>Scanning…</h2>
+        <p>Checking the current page</p>
+      </div>
+    </div>
+
+    <div class="signals">
+      <div class="signals-title">Detection Signals</div>
+      <div class="signal-row">
+        <span class="signal-name">Window Shopify</span>
+        <div class="dot" id="dot-0"></div>
+      </div>
+       <div class="signal-row">
+        <span class="signal-name">Shopify Links</span>
+        <div class="dot" id="dot-1"></div>
+      </div>
+      <div class="signal-row">
+        <span class="signal-name">Shopify Cookie</span>
+        <div class="dot" id="dot-2"></div>
+      </div>
+      <div class="signal-row">
+        <span class="signal-name">Shopify Scripts</span>
+        <div class="dot" id="dot-3"></div>
+      </div>
+    
+    </div>
+
+    <div class="footer">
+      <span class="footer-brand">shopify-detector</span>
+      <span class="footer-url" id="footer-url">—</span>
+    </div>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>
